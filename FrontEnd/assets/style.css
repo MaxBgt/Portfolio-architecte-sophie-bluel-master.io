@@ -350,3 +350,275 @@ footer nav ul {
   justify-content: flex-end;
   margin: 2em;
 }
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: white;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.edit_gallery_title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.edit_gallery_title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background: gray;
+  top: 480px;
+  left: 15%;
+  width: 420px;
+}
+.add_pic {
+  position: absolute;
+  top: 500px;
+  font-family: "Syne";
+  color: white;
+  background-color: #1d6154;
+  padding: 5px;
+  width: 200px;
+  left: 34%;
+  border-radius: 15px;
+  border: none;
+}
+
+.close_modal {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+.pic_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 450px;
+  margin-left: 120px;
+  margin-top: 10px;
+}
+.modal_pic {
+  width: 70px;
+  height: 90px;
+  margin: 5px;
+}
+
+.edit_text {
+  font-size: 0.7rem;
+  margin-left: 5px;
+  margin-top: 0;
+}
+
+.fa-trash-can {
+  position: relative;
+  font-size: 0.5rem;
+  right: 30px;
+  bottom: 80px;
+  color: white;
+  background: black;
+  border: 3px solid black;
+  cursor: pointer;
+}
+.delete_btn {
+  background: none;
+  border: none;
+}
+
+.move_icon {
+  position: absolute;
+  margin-bottom: 325px;
+  margin-left: 40px;
+  height: 0.8rem;
+}
+
+.delete_text {
+  position: absolute;
+  top: 540px;
+  color: red;
+  left: 40%;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+.delete_text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.add_gallery_title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.add_gallery_title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background: gray;
+  top: 510px;
+  left: 15%;
+  width: 420px;
+}
+.modal_add_pic {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: white;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 2;
+}
+.overlay_add_pic {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#add_pic_form {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#add_valid {
+  padding: 5px;
+  width: 200px;
+  border: none;
+  margin-top: 60px;
+}
+
+.hidden_modal2 {
+  display: none;
+}
+.modal_add_pic > * {
+  text-align: center;
+}
+.modal_add_pic h2 {
+  margin-bottom: 20px;
+}
+.modal_add_pic form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_add_pic #titre,
+#categorie {
+  height: 30px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  width: 400px;
+  margin-left: 50px;
+}
+.title {
+  margin-left: 50px;
+}
+.category {
+  margin-left: 50px;
+}
+.modal_add_pic label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.modal_add_pic textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.fa-xmark {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+.fa-arrow-left {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.file_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+  margin-left: 50px;
+  background: #e8f1f6;
+  margin-bottom: 50px;
+}
+
+.fa-image {
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #b9c5cc;
+  font-size: 5rem;
+}
+
+.input-file {
+  display: none;
+}
+.label-file {
+  color: #306685;
+  background-color: #cbd6dc;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+  border-radius: 15px;
+  z-index: 1;
+}
+.accept_file {
+  font-size: 0.6rem;
+  margin-top: 10px;
+  color: #444444;
+}
+
+.close_add_modal {
+  background: none;
+  border: none;
+}
+
+#upload_image {
+  position: absolute;
+  height: 180px;
+  width: 170px;
+  background-position: center;
+  background-size: cover;
+}
