@@ -7,16 +7,14 @@ let user = {
 };
 
 const getToken = async () => {
-  let data = "";
-  await fetch("http://localhost:5678/api/users/login", {
+  let res = await fetch("http://localhost:5678/api/users/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(user),
-  })
-    .then((res) => res.json())
-    .then((res) => (data = res));
+  });
+  let data = await res.json();
   localStorage.setItem("Bearer", data.token);
 };
 
