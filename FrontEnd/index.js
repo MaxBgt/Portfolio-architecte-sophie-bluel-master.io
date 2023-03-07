@@ -115,8 +115,8 @@ const picDisplay = () => {
           `
     )
     .join("");
-  for (const btn of delete_btn) {
-    btn.addEventListener("click", (e) => fetchDelete(e.target.id));
+  for (const btns of delete_btn) {
+    btns.addEventListener("click", (e) => fetchDelete(e.target.id));
   }
 };
 // Supprimer projet dans la modale
