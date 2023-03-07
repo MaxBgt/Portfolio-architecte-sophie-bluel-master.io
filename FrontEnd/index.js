@@ -101,8 +101,7 @@ closeAddModalBtn.addEventListener("click", closeAddModal);
 // Affichage des projets dans la modale
 
 const pic_container = document.querySelector(".pic_container");
-const delete_btn = document.querySelectorAll(".delete_btn");
-
+let delete_btn = document.getElementsByClassName("btn_delete");
 const picDisplay = () => {
   pic_container.innerHTML += projects
     .map(
@@ -116,6 +115,9 @@ const picDisplay = () => {
           `
     )
     .join("");
+  for (const btn of delete_btn) {
+    btn.addEventListener("click", (e) => fetchDelete(e.target.id));
+  }
 };
 // Supprimer projet dans la modale
 const fetchDelete = async (id) => {
@@ -128,11 +130,6 @@ const fetchDelete = async (id) => {
     .then((res) => res)
     .then((res) => console.log(res));
 };
-
-pic_container.addEventListener("click", (e) => {
-  e.preventDefault();
-  fetchDelete(e.target.id);
-});
 
 // Fonction ajouter projet
 const form = document.getElementById("add_pic_form");
