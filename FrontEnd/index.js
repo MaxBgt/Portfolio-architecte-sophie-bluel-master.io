@@ -1,15 +1,13 @@
+// Affichage dynamique projets + filtres
 let projects = [];
 let filterMethod = "Tous";
-
-// Affichage dynamique projets + filtres
 
 const gallery = document.querySelector(".gallery");
 const btnFilter = document.querySelectorAll(".btn_filter");
 
 const fetchProject = async () => {
-  await fetch("http://localhost:5678/api/works")
-    .then((res) => res.json())
-    .then((data) => (projects = data));
+  let res = await fetch("http://localhost:5678/api/works");
+  projects = await res.json();
   projectsDisplay();
   picDisplay();
 };
@@ -120,15 +118,15 @@ const picDisplay = () => {
   }
 };
 // Supprimer projet dans la modale
+const fetchHead = {
+  method: "DELETE",
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("Bearer")}`,
+  },
+};
 const fetchDelete = async (id) => {
-  await fetch(`http://localhost:5678/api/works/${id}`, {
-    method: "DELETE",
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem("Bearer")}`,
-    },
-  })
-    .then((res) => res)
-    .then((res) => console.log(res));
+  await fetch(`http://localhost:5678/api/works/${id}`, fetchHead);
+  let res = await res;
 };
 
 // Fonction ajouter projet
@@ -161,10 +159,8 @@ const fecthAdd = async () => {
       Authorization: `Bearer ${localStorage.getItem("Bearer")}`,
     },
     body: formData,
-  })
-    .then((res) => res.json())
-    .then((res) => console.log(res))
-    .catch((err) => console.log(err));
+  });
+  let res = await res.json();
 };
 
 form.addEventListener("submit", (e) => {
