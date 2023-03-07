@@ -134,6 +134,8 @@ const form = document.getElementById("add_pic_form");
 const inputFile = document.querySelector(".input-file");
 const labelFile = document.querySelector(".label-file");
 const upload_image = document.getElementById("upload_image");
+const category = document.getElementById("categorie");
+
 let uploadedImage = "";
 
 inputFile.addEventListener("change", (e) => {
@@ -147,7 +149,6 @@ inputFile.addEventListener("change", (e) => {
   reader.readAsDataURL(e.target.files[0]);
   upload_image.style.zIndex = 1;
 });
-
 const fecthAdd = async () => {
   let formData = new FormData(form);
   for (item in formData) {
@@ -165,6 +166,9 @@ const fecthAdd = async () => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  fecthAdd();
-  return false;
+  if (`url(${uploadedImage})` !== "url()" && category.value !== "categorie") {
+    fecthAdd();
+  } else {
+    alert("Veuillez ajouter une image ou une catégorie");
+  }
 });
