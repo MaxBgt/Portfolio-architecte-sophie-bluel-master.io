@@ -1,4 +1,5 @@
 const form = document.getElementById("form");
+const incorrect = document.querySelector(".incorrect ");
 let userEmail = document.getElementById("email");
 let userPassword = document.getElementById("password");
 let user = {
@@ -24,6 +25,6 @@ form.addEventListener("submit", async (e) => {
     await getToken();
     window.location.href = "./adminPage.html";
   } else {
-    alert("Erreur dans l'identifiant ou le mot de passe");
+    incorrect.classList.remove("hidden_incorrect");
   }
 });

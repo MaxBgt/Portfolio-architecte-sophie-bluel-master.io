@@ -135,6 +135,7 @@ const inputFile = document.querySelector(".input-file");
 const labelFile = document.querySelector(".label-file");
 const upload_image = document.getElementById("upload_image");
 const category = document.getElementById("categorie");
+const missing = document.querySelector(".missing");
 
 let uploadedImage = "";
 
@@ -169,6 +170,6 @@ form.addEventListener("submit", (e) => {
   if (`url(${uploadedImage})` !== "url()" && category.value !== "categorie") {
     fecthAdd();
   } else {
-    alert("Veuillez ajouter une image ou une catégorie");
+    missing.classList.remove("hidden_missing");
   }
 });

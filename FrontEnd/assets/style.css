@@ -316,7 +316,16 @@ li:hover {
   display: flex;
   flex-direction: column;
 }
+.incorrect {
+  color: red;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+}
 
+.hidden_incorrect {
+  display: none;
+}
 #formLogIn input {
   height: 50px;
   font-size: 1.2em;
@@ -518,7 +527,7 @@ footer nav ul {
   padding: 5px;
   width: 200px;
   border: none;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .hidden_modal2 {
@@ -621,4 +630,16 @@ footer nav ul {
   width: 170px;
   background-position: center;
   background-size: cover;
+}
+
+.missing {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.hidden_missing {
+  display: none;
 }
