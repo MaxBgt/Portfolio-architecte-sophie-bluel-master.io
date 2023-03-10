@@ -324,7 +324,7 @@ li:hover {
 }
 
 .hidden_incorrect {
-  display: none;
+  opacity: 0;
 }
 #formLogIn input {
   height: 50px;
