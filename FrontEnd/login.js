@@ -25,6 +25,6 @@ form.addEventListener("submit", async (e) => {
     await getToken();
     window.location.href = "./adminPage.html";
   } else {
-    incorrect.style.opacity = "1";
+    incorrect.classList.remove("hidden_incorrect");
   }
 });
