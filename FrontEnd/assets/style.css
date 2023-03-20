@@ -258,6 +258,7 @@ li:hover {
   transition: 0.5s;
   cursor: pointer;
 }
+
 .gallery {
   width: 100%;
   display: grid;
@@ -325,7 +326,7 @@ li:hover {
 
 .hidden_incorrect {
   opacity: 0;
-  transition: opacity 0.7s;
+  transition: opacity 0.5s;
 }
 #formLogIn input {
   height: 50px;
@@ -463,7 +464,7 @@ footer nav ul {
 
 .move_icon {
   position: absolute;
-  margin-bottom: 208px;
+  margin-bottom: 324px;
   margin-left: 43px;
   height: 0.8rem;
 }

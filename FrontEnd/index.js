@@ -3,7 +3,7 @@ let projects = [];
 let filterMethod = "Tous";
 
 const gallery = document.querySelector(".gallery");
-const btnFilter = document.querySelectorAll(".btn_filter");
+const btnsFilter = document.querySelectorAll(".btn_filter");
 
 const fetchProject = async () => {
   let res = await fetch("http://localhost:5678/api/works");
@@ -40,7 +40,7 @@ const projectsDisplay = () => {
 };
 window.addEventListener("load", fetchProject);
 
-btnFilter.forEach((btnFilter) => {
+btnsFilter.forEach((btnFilter) => {
   btnFilter.addEventListener("click", (e) => {
     filterMethod = e.target.id;
     projectsDisplay();
