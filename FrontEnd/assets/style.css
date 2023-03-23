@@ -1,0 +1,647 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/** end reset css**/
+
+* {
+  text-decoration: none;
+  color: black;
+}
+body {
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans";
+  font-size: 14px;
+}
+.nav_bar {
+  background: black;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more_edit {
+  color: white;
+}
+
+.publish {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 150px;
+  background: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+section {
+  margin: 50px 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+}
+
+h1 > span {
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
+  color: #1d6154;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav li {
+  padding: 0 10px;
+  font-size: 1.2em;
+}
+
+li:hover {
+  color: #b1663c;
+}
+#introduction {
+  display: flex;
+  align-items: center;
+}
+#introduction figure {
+  flex: 1;
+}
+#introduction img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+#introduction article {
+  flex: 1;
+}
+#introduction h2 {
+  margin-bottom: 1em;
+}
+
+#introduction p {
+  margin-bottom: 0.5em;
+}
+.edit_icon_intro {
+  margin-left: 55px;
+  padding-top: 10px;
+}
+.edit_projet {
+  margin-bottom: 90px;
+  margin-top: 100px;
+}
+#portfolio h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.btn_filter {
+  margin: 10px;
+  background: none;
+  border-radius: 150px;
+  width: 140px;
+  padding: 6px;
+  font-size: 0.8rem;
+  border: 1px solid #1d6154;
+}
+
+.btn_filter:hover {
+  color: white;
+  background: #1d6154;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+}
+#contact {
+  width: 50%;
+  margin: auto;
+}
+#contact > * {
+  text-align: center;
+}
+#contact h2 {
+  margin-bottom: 20px;
+}
+#contact form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+  margin: 2em 0 1em 0;
+}
+#contact textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#formLogIn {
+  width: 50%;
+  margin: auto;
+}
+#formLogIn > * {
+  text-align: center;
+}
+#formLogIn h2 {
+  margin-bottom: 20px;
+}
+#formLogIn form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.incorrect {
+  color: red;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.hidden_incorrect {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#formLogIn input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#formLogIn label {
+  margin: 2em 0 1em 0;
+}
+#formLogIn textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.motDePasseOublie {
+  text-decoration: underline;
+}
+
+input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2em;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: white;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.edit_gallery_title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.edit_gallery_title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background: gray;
+  top: 480px;
+  left: 15%;
+  width: 420px;
+}
+.add_pic {
+  position: absolute;
+  top: 500px;
+  font-family: "Syne";
+  color: white;
+  background-color: #1d6154;
+  padding: 5px;
+  width: 200px;
+  left: 34%;
+  border-radius: 15px;
+  border: none;
+}
+
+.close_modal {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+.pic_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 450px;
+  margin-left: 120px;
+  margin-top: 10px;
+}
+.modal_pic {
+  width: 70px;
+  height: 90px;
+  margin: 5px;
+}
+
+.edit_text {
+  font-size: 0.7rem;
+  margin-left: 5px;
+  margin-top: 0;
+}
+
+.fa-trash-can {
+  position: relative;
+  font-size: 0.5rem;
+  right: 30px;
+  bottom: 80px;
+  color: white;
+  background: black;
+  border: 3px solid black;
+  cursor: pointer;
+}
+.delete_btn {
+  background: none;
+  border: none;
+}
+
+.move_icon {
+  position: absolute;
+  margin-bottom: 324px;
+  margin-left: 43px;
+  height: 0.8rem;
+}
+
+.delete_text {
+  position: absolute;
+  top: 540px;
+  color: red;
+  left: 40%;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+.delete_text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.add_gallery_title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.add_gallery_title::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background: gray;
+  top: 510px;
+  left: 15%;
+  width: 420px;
+}
+.modal_add_pic {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: white;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 2;
+}
+.overlay_add_pic {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#add_pic_form {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#add_valid {
+  padding: 5px;
+  width: 200px;
+  border: none;
+  margin-top: 40px;
+}
+
+.hidden_modal2 {
+  display: none;
+}
+.modal_add_pic > * {
+  text-align: center;
+}
+.modal_add_pic h2 {
+  margin-bottom: 20px;
+}
+.modal_add_pic form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_add_pic #titre,
+#categorie {
+  height: 30px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  width: 400px;
+  margin-left: 50px;
+}
+.title {
+  margin-left: 50px;
+}
+.category {
+  margin-left: 50px;
+}
+.modal_add_pic label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.modal_add_pic textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.fa-xmark {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+.fa-arrow-left {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+.file_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+  margin-left: 50px;
+  background: #e8f1f6;
+  margin-bottom: 50px;
+}
+
+.fa-image {
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #b9c5cc;
+  font-size: 5rem;
+}
+
+.input-file {
+  display: none;
+}
+.label-file {
+  color: #306685;
+  background-color: #cbd6dc;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+  border-radius: 15px;
+  z-index: 1;
+}
+.accept_file {
+  font-size: 0.6rem;
+  margin-top: 10px;
+  color: #444444;
+}
+
+.close_add_modal {
+  background: none;
+  border: none;
+}
+
+#upload_image {
+  position: absolute;
+  height: 180px;
+  width: 170px;
+  background-position: center;
+  background-size: cover;
+}
+
+.missing {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.hidden_missing {
+  display: none;
+}
